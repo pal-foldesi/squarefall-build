@@ -1,4 +1,8 @@
-import { CONTEXT, SQUARE_SIDE_LENGTH } from './constants.js';
+import {
+  CONTEXT,
+  SQUARE_SIDE_LENGTH,
+} from './constants.js';
+
 export default class Square {
   constructor(point, fillStyle) {
     // The point of a Square always refers to its top left point
@@ -21,7 +25,7 @@ export default class Square {
   }
 
   drawCoordinates() {
-    CONTEXT.fillStyle = 'black';
+    CONTEXT.fillStyle = 'black'
     CONTEXT.fillText(`${this.point.x} | ${this.point.y}`, this.point.x, this.point.y);
   }
 
@@ -44,7 +48,10 @@ export default class Square {
   }
 
   equals(otherSquare) {
-    return otherSquare !== undefined && otherSquare instanceof Square && this.sideLength === otherSquare.sideLength && this.point.equals(otherSquare.point);
+    return otherSquare !== undefined &&
+      otherSquare instanceof Square &&
+      this.sideLength === otherSquare.sideLength &&
+      this.point.equals(otherSquare.point);
   }
 
   moveDown() {
@@ -81,5 +88,4 @@ export default class Square {
   isBelowLimit(yLimit) {
     return this.point.y < yLimit;
   }
-
 }

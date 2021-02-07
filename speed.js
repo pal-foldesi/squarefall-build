@@ -13,8 +13,6 @@ export default class Speed {
     if (desiredSpeed > this.value) {
       this.increase();
     }
-
     return this.value;
   }
-
 }

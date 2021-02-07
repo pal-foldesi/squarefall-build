@@ -7,17 +7,15 @@ export default class Score {
 
   static getHighScore() {
     let highScore = localStorage.getItem('tetris-high');
-
     if (highScore === undefined) {
       highScore = 0;
     }
-
     return highScore;
   }
 
-  static calculateIncrease(rowsCleared) {
-    const score = 2 ** rowsCleared + 2;
-    return score;
+  static calculateIncrease (rowsCleared) {
+    const score = (2 ** rowsCleared) + 2
+    return score
   }
 
   increment(value) {
@@ -39,5 +37,4 @@ export default class Score {
       document.getElementById('high-score').innerText = this.current;
     }
   }
-
 }
