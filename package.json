@@ -1,0 +1,7 @@
+{
+  "name": "squarefall-build",
+  "description": "Experimenting with building, testing and GitHub Actions.",
+  "scripts": {
+    "build": ""
+  }
+}
