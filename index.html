@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Squarefall</title>
+    <link rel="stylesheet" href="./style.css">
+    <script type="module" src="game.js" defer></script>
+</head>
+
+<body>
+    <div id="loading">Loading...</div>
+    <div align="center" id="container">
+        <div id="helpContainer">
+            <div>H E L P</div>
+            <div>J: left</div>
+            <div>K: rotate</div>
+            <div>L: right</div>
+            <div>space: drop</div>
+        </div>
+        <div id="gameContainer">
+            <canvas id="gameCanvas" />
+        </div>
+        <div id="gameOverContainer" hidden>
+            GAME OVER
+        </div>
+        <div id="speedContainer">
+            <div>S P E E D</div>
+            <span id="current-speed">0</span>
+        </div>
+        <div id="scoreContainer">
+            <div>S C O R E</div>
+            <div>
+                <span>Best:</span>
+                <span id="high-score"></span>
+            </div>
+            <div id="score">
+                <span>Current:</span>
+                <span id="current-score">0</span>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

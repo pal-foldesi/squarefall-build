@@ -1,0 +1,61 @@
+#gameCanvas, #scoreContainer, #helpContainer, #speedContainer {
+    border: 1px solid #000000;
+}
+
+#scoreContainer, #helpContainer, #speedContainer {
+    padding: 1em;
+}
+
+#container {
+    display: none;
+    /* Working around a potential Firefox bug by using fr instead of % - 
+    see https://bugzilla.mozilla.org/show_bug.cgi?id=1609495 */
+    grid-template-columns: 35fr 30fr 35fr;
+    grid-template-rows: 1fr 20fr 30fr 30fr 20fr 1fr;
+    justify-items: center;
+    align-items: center;
+}
+
+#helpContainer {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 3;
+    grid-row-end: 5;
+}
+
+#gameContainer {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 6;
+}
+
+#gameOverContainer {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 6;
+    font-size: 7em;
+    z-index: 1;
+}
+
+#speedContainer {
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 3;
+    grid-row-end: 4;
+}
+
+#scoreContainer {
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 4;
+    grid-row-end: 5;
+}
+
+#loading {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}
